@@ -1,0 +1,86 @@
+	<section>
+		<h2>What Does Accessibility Mean to Us?</h2>
+	</section>
+	<section>
+		<section>
+			<h2>UX</h2>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Operability of the Site</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Site Map</h3>
+			<ul>
+				<li class="fragment">All sites must have a site map</li>
+				<li class="fragment">All pages must include the site map link</li>
+				<li class="fragment">All links of the website must be included</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Navigation</h3>
+			<ul>
+				<li class="fragment">All links available from the homepage</li>
+				<li class="fragment">Menu items remain in same location and order</li>
+				<li class="fragment">Utilize related links</li>
+			</ul>
+			<aside class="notes">Related Links don't necessarily have to live in a section entitled "Related Links". It's more about being cognizant of all the pages that tie into each other and crosslinking them whether it be in the content or in a specific area</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Search Functionality</h3>
+			<ul>
+				<li class="fragment">Sites should have search functionality</li>
+				<li class="fragment">Should include an input field and submit button</li>
+				<li class="fragment">Spell-checker, stemming and synonym extra features will enhance accessibility</li>
+			</ul>
+			<aside class="notes">Search is especially important in e-commerce sites. The search is only as good as it's results though. If the returned results aren't actually related to the term/s then it would be an accessiblity fail. Luckily the CMS's we use come with built in functionality that is usually pretty good or there are outside search services that are available.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Content</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Content</span>
+			<h3>Show it</h3>
+			<ul>
+				<li class="fragment">Don't hide content at one screen size versus another</li>
+				<li class="fragment">Limit content that is only viewable on hover or click</li>
+			</ul>
+			<aside class="notes">Content should be thought out strategically. Keeping in mind how text will look on a smaller device will help pare things down into more digestible and easy to read and understandable content. If it's too wordy for mobile, then it's too wordy in general. We shouldn't be hiding content as it gets to smaller sizes. We run into the second item a lot at LMO. Touch devices don't have 'hover'. So the question should always be asked, what is the reason for not showing this content right away? If there's a definite need for it to be hidden initially, there should be a button prompt letting the user know that they have to take an action to view the rest of the content.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Content</span>
+			<h3>Logical order/groupings</h3>
+			<ul>
+				<li class="fragment">Does the content sequence make sense?</li>
+				<li class="fragment">Is the webpage easily scannable?</li>
+				<li class="fragment">Are corresponding pieces of content near each other?</li>
+			</ul>
+			<aside class="notes">I don't think LMO fails at this. I think we do good with this item for the most part. Again, it helps to think of this one in a mobile-first format, in my opinion. How is mobile content going to read? Then decide what adjustments, if any, need to be made for larger screens. When I say scannable, I mean are the structural components (header, footer, sidebar) easily differentiated from the main content? And is the main content laid out with a page title followed by corresponding page content with quickly readable headers that give meaning to the content on the page? The last point is kind of self explantory.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Meaningful Links</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Meaningful Links</span>
+			<h3>Context</h3> 
+			<ul>
+				<li class="fragment">Link text should be explanatory - no Click Here or Read More</li>
+				<li class="fragment">Text surrounding the link should be in relation to the link itself</li>
+			</ul>
+			<aside class="notes">In a lot of cases this will fall to the developer to handle. We use a class on content that makes it hidden from view but read by screen readers. We tend to use Learn More or Read More when it comes to blog articles, which makes sense from getting a user to understand there is more content elsewhere, but this is a big accessibility failure. But it's also something that is very easy to correct. Example: Learn More About Topic XYZ, where About XYZ would be in the code but hidden from view.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Meaningful Links</span>
+			<h3>External</h3>
+			<ul>
+				<li class="fragment">Only use external links when necessary</li>
+				<li class="fragment">External links should give users advanced warning</li>
+			</ul>
+			<aside class="notes">External links can be jarring to those with disabilities. The user is searching a website, the click on a link, and then they're on a whole different site without warning. If the external link is in text, then it would be helpful to explicity say in the text that the following link/s will open in a new site. If it's a standalone link, there should be an icon that signifies a new window will be open and then in code, the developer can use the access class to say that the link will open in a new window.</aside>
+		</section>
+	</section>

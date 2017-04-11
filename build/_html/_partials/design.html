@@ -1,0 +1,146 @@
+	<section>
+		<section>
+			<h2>Design</h2>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Color</h2>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Contrast Ratios</h3>
+			<ul>
+				<li class="fragment">> 24px &amp; > 19px bold = 4:5:1</li>
+				<li class="fragment">24+px &amp; 19+px bold = 3:1</li>
+				<li class="fragment">Color Palette/Branding</li>
+				<li class="fragment">Hover/Focus states</li>
+			</ul>
+			<aside class="notes">All text of the page must be test and passing. This means text placed over image, video or multi-colored backgrounds. When we create branding from a project's outset we should be ensuring that the logo and color palette will meet contrast – especially true with buttons. If the colors don't work they'll need to be modified until they do. And if we are given brand standards from an existing guide and the colors will fail contrast, we need to let the client know that their colors will be adjust until they pass the necessary accessibility color contrast ratios. Both hover and focus states must pass the ratios in addition to the default state.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Conveying Information</h3>
+			<ul>
+				<li class="fragment">Text plus color</li>
+				<li class="fragment">Color plus patterns or icons</li>
+			</ul>
+			<aside class="notes">We can't rely on color alone to convey meaning. If using color to represent an action or state of something use it in conjunction with text and icons where applicable. The color and pattern item example would be have a route map that uses color to indicate the different paths. In conjunction to the color, a symbol/pattern such as diamonds, squares and circles would also be used.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Tools</h3>
+			<ul>
+				<li class="fragment">Contrast Checker <a href="http://contrastchecker.com/">http://contrastchecker.com/</a></li>
+				<li class="fragment">Lea Verou’s Contrast Ratio Tool <a href="http://leaverou.github.io/contrast-ratio/">http://leaverou.github.io/contrast-ratio/</a></li>
+				<li class="fragment">Colour Contrast Analyzer <a href="https://www.paciellogroup.com/resources/contrastanalyser/">https://www.paciellogroup.com/resources/contrastanalyser/</a></li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Font Guidelines</h2>
+			<ul>
+				<li class="fragment">Avoid small font size: 16 pixels is recommended</li>
+				<li class="fragment">Limit number of fonts used and ensure they're legible</li>
+				<li class="fragment">Limit the use of bold, italic and all capitals</li>
+				<li class="fragment">Avoid blinking or moving text</li>
+			</ul>
+			<aside class="notes">While there is no set specification on a baseline font-size, the development team recommends a starting size of 16px and nothing below 12px if a smaller size is used. The number of fonts used not only can decrease legibility and cause confusion, it can also have a dramatic impact on overall page weight. Font variants should be used only as necessary. Using all caps in large blocks of text makes reading difficulty - limit the use of all caps. Blinking and moving text can cause distractions. There's also a WCAG guideline that requires any autoplaying animations/video must require pause/stop functionality.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Mobile Touch Areas</h2>
+			<ul>
+				<li class="fragment">Tap target size is a minimum of 48px</li>
+				<li class="fragment">Space between tap areas should be a minimum of 32px</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Links</h2>
+			<ul>
+				<li class="fragment">Contrast with surrounding text is 3:1</li>
+				<li class="fragment">Contrast with background</li>
+				<li class="fragment">Indicator (underline)</li>
+				<li class="fragment">Hover &amp; Focus States</li>
+				<li class="fragment">Meaningful content</li>
+				<li class="fragment">External Link Indicator</li>
+			</ul>
+			<aside class="notes">Link text must pass the requisite color contrast with the background and also provide a sufficient contrast between the surrounding text. However, because color should not be the way to convey something, an indicator should also be used. The best and easiest indicator is underlining the link text. Hover and focus states must also follow the contrast ratios and provide an indication of change. And as mentioned previously, if a link opens in a new window, there should be something to indicate that.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Focus States</h2>
+			<ul>
+				<li class="fragment">Browser Defaults</li>
+				<li class="fragment">Overrides must pass color contrast</li>
+				<li class="fragment">Anything navigable requires a focus
+					<ul>
+						<li class="fragment">Links, Buttons, Accordions, Menu Buttons, Modal Windows, Tabs/tab content</li>
+					</ul>
+				</li>
+			</ul>
+			<aside class="notes">All browsers have built-in focus states. This is the blue line that people always seem to question. These focus states are necessary. In most cases, the best thing to do is leave this as a browser default. This is an easily changeable item, but if it is changed to more match a site's color scheme, it still must pass color contrast ratio rules.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Forms</h2>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Guidelines</h3>
+			<ul>
+				<li class="fragment">Show labels (placeholders are not labels)</li>
+				<li class="fragment">Inputs and placeholder text pass color ratios</li>
+				<li class="fragment">Indicate specific format (date, phone)</li>
+				<li class="fragment">Inputs must scale if the page is scaled up in size</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Guidelines Continued</h3>
+			<ul>
+				<li>Indicate required fields
+					<ul>
+						<li class="fragment">Asterisk and text</li>
+						<li class="fragment">Notation must be in the intro text or the first element above the form (visually and html position)</li>
+					</ul>
+				</li>
+				<li class="fragment">Error vs. Success
+					<ul>
+						<li class="fragment">Color, Text and Icons</li>
+						<li class="fragment">Text is informative</li>
+					</ul>
+				</li>
+				<li class="fragment">Submit
+					<ul>
+						<li class="fragment">No auto submissions (utilize button)</li>
+						<li class="fragment">In-page completion message should receive focus</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Financial, Legal or Testing</h3>
+			<ul>
+				<li class="fragment">Ability to review before submission and confirm review</li>
+				<li class="fragment">Ability to recover deleted information</li>
+				<li class="fragment">Confirmation before continuation</li>
+				<li class="fragment">Success Feedback</li>
+			</ul>
+			<aside class="notes">User must review input is correct before completing an irreversible transaction. A checkbox is also required during a review stage or before form submission can be completed. In regards to deleted information, think of Gmail, you can delete items but they're moved to a Trash folder which then has a Permanently Delete action. A user must be prompted with a message asking if they were sure they want to take that action. Think of a form cancel button. Success feedback would be something like creating a user account. The user should be notified their account was created successfully and then told if they are automatically logged in or if they will need to take further action.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Video</h2>
+			<ul>
+				<li class="fragment">YouTube Preferred</li>
+				<li class="fragment">Auto-playing videos must have pause/stop controls (and muted)</li>
+				<li class="fragment">Many accessibility rules to follow
+					<ul>
+						<li class="fragment">Controls, Closed Caption, Scripts w/time cues, etc</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</section>

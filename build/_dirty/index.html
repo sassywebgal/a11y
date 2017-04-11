@@ -1,0 +1,773 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="/assets/css/screen.css" rel="stylesheet" media="screen">
+	    <!-- <link href="/assets/css/print.css" rel="stylesheet" media="print"> -->
+	    <link rel="shortcut icon" href="/favicon.ico">
+	    <title>Accessibility For All</title>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+		<section>
+		<section>
+			<h1>Accessibility for All</h1>
+		</section>
+		<section>
+			<h2>Background</h2>
+			<ul>
+				<li class="fragment">Stats</li>
+				<li class="fragment">WCAG</li>
+				<li class="fragment">Section 508</li>
+				<li class="fragment">Trends</li>
+			</ul>
+			<aside class="notes">
+				First, I'll review some background regarding A11Y. We'll go over some industry statistics regarding disabilities; what WCAG is and its levels; what Section 508 is and we'll finish this section with what I'm calling trends.
+			</aside>
+		</section>
+		<section>
+			<h2>Core Principles</h2>
+			<ul>
+				<li class="fragment">UX</li>
+				<li class="fragment">Design</li>
+				<li class="fragment">Development</li>
+			</ul>
+			<aside class="notes">
+				Next, I'll delve into some specific core principles of A11Y that we should be practicing within the various departments of our company. A11Y doesn't just fall on front-end developers.
+			</aside>
+		</section>
+		<section>
+			<h2>Tools</h2>
+			<aside class="notes">
+				Lastly, we'll review some tools available to us as designers and developers that will help making accessible websites easier in the future.
+			</aside>
+		</section>
+	</section>
+		<section>
+		<section>
+			<h2>What is Accessibility?</h2>
+			<small class="subtitle">A11Y</small>
+		</section>
+		<aside class="notes">
+			So, what is accessibility? Accessibility is... A11Y is...
+			Inclusion
+		</aside>
+	</section>
+	<section>
+		<section>
+			<h2>Statistics</h2>
+		</section>
+		<section>
+			<span class="section-path">Statistics</span>
+			<h3>2015 Census Results</h3>
+			<small class="subtitle">Over 311 million Americans surveyed</small>
+			<ul>
+				<li class="fragment">12.4% or almost 40 million have a disability</li>
+				<li class="fragment">44% of those with a disability are age 18-74 <small class="fragment">(our most likely computer-using demographic)</small></li>
+				<li class="fragment">3.5% of that population, or over 10 million, have difficulty hearing</li>
+				<li class="fragment">2.3%, or over 7 million, have vision difficulty</li>
+				<li class="fragment">5%, or over 14 million, have cognitive difficulty</li>
+				<li class="fragment">7%, or over 20 million, have ambulatory difficulty</li>
+			</ul>
+			<cite>
+				Reference:<br>
+				<a href="https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_5YR/S1810" target="_blank">https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_5YR/S1810</a>
+			</cite>
+		</section>
+		<section>
+			<span class="section-path">Statistics</span>
+			<h3>Color Vision Deficiency</h3>
+			<ul>
+				<li class="fragment">Affects 1 in 12 men</li>
+				<li class="fragment">Affects 1 in 200 women</li>
+				<li class="fragment">Red/Green Defeciency is the most prevalent</li>
+			</ul>
+			<cite>
+				Reference<br>
+				<a href="http://www.colourblindawareness.org/colour-blindness/" target="_blank">http://www.colourblindawareness.org/colour-blindness/</a>
+			</cite>
+		</section>		
+		<section>
+			<span class="section-path">Statistics :: Color Vision Deficiency</span>
+			<h3>Ishihara Color Deficiency Test</h3>
+			<img src="/assets/images/color-vision-deficiency-test.jpeg" alt="Ishihara Color Blindness Test Plates">
+		</section>
+		<section>
+			<span class="section-path">Statistics</span>
+			<h3>WebAim User Survey 2015</h3>
+			<small class="subtitle">Over 2500 users surveyed</small>
+			<div class="col-content">
+				<div class="col">
+					
+					<table>
+						<caption>Primary Screen Reader</caption>
+						<thead>
+							<tr>
+								<th>Screen Reader</th>
+								<th>Percent of Respondents</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Jaws</td>
+								<td>30.2%</td>
+							</tr>
+							<tr>
+								<td>ZoomText</td>
+								<td>22.2%</td>
+							</tr>
+							<tr>
+								<td>Window-Eyes</td>
+								<td>20.7%</td>
+							</tr>
+							<tr>
+								<td>NVDA</td>
+								<td>14.6%</td>
+							</tr>
+							<tr>
+								<td>VoiceOver</td>
+								<td>7.6%</td>
+							</tr>
+							<tr>
+								<td>System Access</td>
+								<td>1.5%</td>
+							</tr>
+							<tr>
+								<td>ChromeVox</td>
+								<td>0.3%</td>
+							</tr>
+							<tr>
+								<td>Other</td>
+								<td>2.9%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+					
+					<table>
+						<caption>Browsers</caption>
+						<thead>
+							<tr>
+								<th>Browser</th>
+								<th>Percent of Respondents</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Internet Explorer 10+</td>
+								<td>34.9%</td>
+							</tr>
+							<tr>
+								<td>Firefox</td>
+								<td>30.1%</td>
+							</tr>
+							<tr>
+								<td>IE 6,7,8</td>
+								<td>12.8%</td>
+							</tr>
+							<tr>
+								<td>Safari</td>
+								<td>7.9%</td>
+							</tr>
+							<tr>
+								<td>Chrome</td>
+								<td>6.3%</td>
+							</tr>
+							<tr>
+								<td>IE 9</td>
+								<td>5.8%</td>
+							</tr>
+							<tr>
+								<td>Other</td>
+								<td>2.2%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<cite>
+				Reference<br>
+				<a href="http://webaim.org/projects/screenreadersurvey6/" target="_blank">http://webaim.org/projects/screenreadersurvey6/</a>
+			</cite>
+			<aside class="notes">Webaim is...</aside>
+		</section>
+		<section> 
+			<span class="section-path">Statistics</span>
+			<h3>WebAim User Survey 2015</h3>
+			<small class="subtitle">Over 2500 users surveyed</small>
+			<div class="col-content">
+				<div class="col">
+					
+					<table>
+						<caption>Web Accessibility Progress</caption>
+						<thead>
+							<tr>
+								<th>Response</th>
+								<th>Percent of Respondents</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>More Accessible</td>
+								<td>38.7%</td>
+							</tr>
+							<tr>
+								<td>Has not changed</td>
+								<td>37.7%</td>
+							</tr>
+							<tr>
+								<td>Less Accessible</td>
+								<td>23.6%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+					
+					<table>
+						<caption>Reasons for Inaccessibility</caption>
+						<thead>
+							<tr>
+								<th>Response</th>
+								<th>Percent of Respondents</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Lack of Awareness</td>
+								<td>43%</td>
+							</tr>
+							<tr>
+								<td>Lack of skills/knowledge</td>
+								<td>26.6%</td>
+							</tr>
+							<tr>
+								<td>Fear that it hinders look, feel or functionality</td>
+								<td>20.3%</td>
+							</tr>
+							<tr>
+								<td>Lack of budget/resources</td>
+								<td>10.1%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<cite>
+				Reference<br>
+				<a href="http://webaim.org/projects/screenreadersurvey6/" target="_blank">http://webaim.org/projects/screenreadersurvey6/</a>
+			</cite>
+			<aside class="notes">Webaim is...</aside>
+		</section>
+	</section>
+	<section>
+		<section>
+			<h2>WCAG</h2>
+			<small class="subtitle">Web Content Accessibility Guidelines</small>
+			<ul>
+				<li class="fragment">Technical Standard for those in the web industry</li>
+				<li class="fragment">Version 2.0, but 2.1 is in the works</li>
+				<li class="fragment">12 guidelines in 4 principle areas, including success criteria for testing</li>
+				<li class="fragment">Documentation to meet guidelines, development techniques and further understanding</li>
+			</ul>
+			<cite>
+				Reference<br>
+				<a href="https://www.w3.org/WAI/intro/wcag" target="_blank">https://www.w3.org/WAI/intro/wcag</a>
+			</cite>
+			<aside class="notes">
+				This is the technical standard for web content developers, web authors, web evaluation tool developers and anyone else that needs to adhere to web accessibility. Its goal is to provide a single, shared standard that meets the needs of everyone, everywhere. Developed by the Accessibility Guidelines Working Group, part of the World Wide Web Consortium (W3C) Web Accessiblity Initiative (WAI).
+			</aside>
+		</section>
+		<section>
+			<span class="section-path">WCAG</span>
+			<h2>4 Principles</h2>
+			<ul>
+				<li>Perceivable</li>
+				<li>Operable</li>
+				<li>Understandable</li>
+				<li>Robust</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WGAG :: 4 Principles</span>
+			<h3>Perceivable</h3>
+			<ul>
+				<li>Provide text alternatives for non-text content</li>
+				<li class="fragment">Provide captions and other alternatives for multimedia</li>
+				<li class="fragment">Create content that can be presented in different ways, including by assistive technologies, without losing meaning</li>
+				<li class="fragment">Make it easier for users to see and hear content</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WCAG :: 4 Principles</span>
+			<h3>Operable</h3>
+			<ul>
+				<li>Make all functionality available from a keyboard</li>
+				<li class="fragment">Give users enough time to read and use content</li>
+				<li class="fragment">Do not use content that causes seizures</li>
+				<li class="fragment">Help users navigate and find content</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WCAG :: 4 Principles</span>
+			<h3>Understandable</h3>
+			<ul>
+				<li>Make text readable and understandable</li>
+				<li class="fragment">Make content appear and operate in predictable ways</li>
+				<li class="fragment">Help users avoid and correct mistakes</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WCAG :: 4 Principles</span>
+			<h3>Robust</h3>
+			<ul>
+				<li>Maximize compatibility with current and future user tools</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WCAG</span>
+			<h2>Levels</h2>
+			<ul>
+				<li>Level A</li>
+				<li>Level AA</li>
+				<li>Level AAA</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">WCAG :: Levels</span>
+			<h3>Level A</h3>
+			<p class="fragment">Most minimal level. Typically the easiest to implement from all standpoints (business logic, design and development). More of an impact on all users, not specific to one type of disability.</p>
+		</section>
+		<section>
+			<span class="section-path">WCAG :: Levels</span>
+			<h3>Level AA</h3>
+			<p class="fragment">What LMO strives to meet. Requires a little more diligence on everybody, but the benefit impact for all users is greater.</p>	
+		</section>
+		<section>
+			<span class="section-path">WCAG :: Levels</span>
+			<h3>Level AAA</h3>
+			<p class="fragment">Most difficult to adhere to. In some cases targets more specific disabilities.</p>
+		</section>
+		<aside class="notes">
+			The three levels are how the conformity to the guidelines is to be tested. Using generalities to describe these levels. The full webpage must pass all success criteria tests in order to pass the level. Level AAA is not a generally recommended Level to reach because it's hard for certain types of content, or all content, to adhere to these guidelines. However, there are certain Level AAA items, especially in regards to content markup, that are easy enough to do and should be considered standard practice.
+		</aside>
+	</section>
+	<section>
+		<section>
+			<h2>Section 508</h2>
+			<p class="fragment">Refers to the Federal law that requires all Federal agencies to ensure that any electronic and information technology it develops, procures, maintains or uses is accessible to persons with disabilities.</p>
+			<p class="fragment">Refreshed in 2017 to update rules, reorganize standards and harmonize with other guidelines and standards such as the European Commission and WCAG. Compliance to begin in January 2018.</p>
+			<aside class="notes">
+				Wading through accessibility documentation is a painstaking task. So far there isn't a revised 508 checklist to follow. For any Federal websites LMO made produce, we'll follow the Section 508 rules as we know them today. However, with Section 508 now also adhering to WCAG 2.0 Level AA, so long as we follow those guidelines - and pass them - the websites we produce will also most likely be 508 compliant as well.
+			</aside>
+		</section>
+	</section>
+	<section>
+		<section>
+			<h2>Trends</h2>
+			<ul>
+				<li>Resources</li>
+				<li>Lawsuits</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Trends</span>
+			<h3>Resources</h3>
+		</section>
+		<section>
+			<span class="section-path">Trends</span>
+			<h3>Lawsuits</h3>
+			<p>Finance/Insurance, Healthcare, Travel, E-Commerce, Government and Education websites have a higher probability of incurring a lawsuit. However, retailers are a common target of lawsuits.</p>
+			<ul>
+				<li class="fragment">2008 Target Corporation Settles with NFB paying 6 million in damages</li>
+				<li class="fragment">2015 over 60 website accessibility lawsuits</li>
+				<li class="fragment">2016 over 240 website accessiblity lawsuits</li>
+				<li class="fragment">2016 LMO produces accessiblity audit and website updates for client Stein Sperling</li>
+				<li class="fragment">2017 UC Berkley pulls 20,000 videos rather than making them accessible</li>
+			</ul>
+			<aside class="notes">
+				Lawsuits are filed under ADA Title II and III. Title II pertains to public universities. Title III specifically cites that accessibility descrimination cannot take place in 'public accommodation.' The law does not specifically include websites as the law was made in the infancy of the web and has yet to be changed. It is up to individual courts to determine how they want to interpret the law. So there have been the large uptick in lawsuits because the DOJ is cracking down, lawyers are benefiting from those cases that are winning, and because the laws haven't been updated. The ADA laws are likely to be updated in the upcoming years, and with that we'll most likely see more of an emphasis on inclusive websites. LMO is slightly ahead of the curve as we try to concentrate on a lot of accessibility best practices. However, it would behoove us as a company to be in the habit of looking at ux, design and development with accessibility in mind. This shouldn't be an upsell. This should be a part of our best practice. And so with the rest of this presentation, I'll outline how those that produce websites (ux, design, dev) will benefit all users by following WCAG 2.0 Level AA guidelines.
+				<cite>http://www.adatitleiii.com/2016/03/tracking-the-trends-website-accessibility-lawsuits-by-the-numbers/</cite>
+				<cite>http://www.adatitleiii.com/2017/01/ada-title-iii-lawsuits-increase-by-37-percent-in-2016/</cite>
+				<cite>http://www.adatitleiii.com/2017/03/uc-berkley-to-remove-more-than-20000-online-videos-from-public-access-in-response-to-doj-captioning-demand/</cite>
+				<cite>http://webaim.org/blog/uc-berkeley-inaccessibility/</cite>
+				<cite>http://karlgroves.github.io/a11y-lawsuits/lawsuits.html</cite>
+				Thousands of letters sent each year to business outining accessibility issues and asking for recourse.
+		
+				Universities and School Systems
+				County, City sites
+				Stein Sperling - Law firm that had a client that was being sued for accessibilty violations. That in turn made the lawfirm be more cognizant of the accessbility problems with their website and they wanted to proactive. They contacted LMO to make their website more accessible. First an audit was done use a few tool resources as well as manual checks to compile a list of issues on a per template basis. The audit was provided to Stein Sperling and they chose to proceed with the necessary fixes.
+			</aside>
+		</section>
+		<section>
+			<span class="section-path">Trends</span>
+			<h3>References</h3>
+			<ul>
+				<li><a href="https://www.w3.org/WAI/bcase/target-case-study" target="_blank">https://www.w3.org/WAI/bcase/target-case-study</a></li>
+				<li><a href="http://www.adatitleiii.com/2017/01/ada-title-iii-lawsuits-increase-by-37-percent-in-2016/" target="_blank">http://www.adatitleiii.com/2017/01/ada-title-iii-lawsuits-increase-by-37-percent-in-2016/</a></li>
+				<li><a href="http://www.adatitleiii.com/2017/03/uc-berkley-to-remove-more-than-20000-online-videos-from-public-access-in-response-to-doj-captioning-demand/" target="_blank">http://www.adatitleiii.com/2017/03/uc-berkley-to-remove-more-than-20000-online-videos-from-public-access-in-response-to-doj-captioning-demand/</a></li>
+				<li><a href="http://webaim.org/blog/uc-berkeley-inaccessibility/" target="_blank">http://webaim.org/blog/uc-berkeley-inaccessibility/</a></li>
+				<li><a href="http://karlgroves.github.io/a11y-lawsuits/lawsuits.html" target="_blank">http://karlgroves.github.io/a11y-lawsuits/lawsuits.html</a></li>
+			</ul>
+		</section>
+	</section>
+		<section>
+		<h2>What Does Accessibility Mean to Us?</h2>
+	</section>
+	<section>
+		<section>
+			<h2>UX</h2>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Operability of the Site</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Site Map</h3>
+			<ul>
+				<li class="fragment">All sites must have a site map</li>
+				<li class="fragment">All pages must include the site map link</li>
+				<li class="fragment">All links of the website must be included</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Navigation</h3>
+			<ul>
+				<li class="fragment">All links available from the homepage</li>
+				<li class="fragment">Menu items remain in same location and order</li>
+				<li class="fragment">Utilize related links</li>
+			</ul>
+			<aside class="notes">Related Links don't necessarily have to live in a section entitled "Related Links". It's more about being cognizant of all the pages that tie into each other and crosslinking them whether it be in the content or in a specific area</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Operability of the Site</span>
+			<h3>Search Functionality</h3>
+			<ul>
+				<li class="fragment">Sites should have search functionality</li>
+				<li class="fragment">Should include an input field and submit button</li>
+				<li class="fragment">Spell-checker, stemming and synonym extra features will enhance accessibility</li>
+			</ul>
+			<aside class="notes">Search is especially important in e-commerce sites. The search is only as good as it's results though. If the returned results aren't actually related to the term/s then it would be an accessiblity fail. Luckily the CMS's we use come with built in functionality that is usually pretty good or there are outside search services that are available.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Content</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Content</span>
+			<h3>Show it</h3>
+			<ul>
+				<li class="fragment">Don't hide content at one screen size versus another</li>
+				<li class="fragment">Limit content that is only viewable on hover or click</li>
+			</ul>
+			<aside class="notes">Content should be thought out strategically. Keeping in mind how text will look on a smaller device will help pare things down into more digestible and easy to read and understandable content. If it's too wordy for mobile, then it's too wordy in general. We shouldn't be hiding content as it gets to smaller sizes. We run into the second item a lot at LMO. Touch devices don't have 'hover'. So the question should always be asked, what is the reason for not showing this content right away? If there's a definite need for it to be hidden initially, there should be a button prompt letting the user know that they have to take an action to view the rest of the content.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Content</span>
+			<h3>Logical order/groupings</h3>
+			<ul>
+				<li class="fragment">Does the content sequence make sense?</li>
+				<li class="fragment">Is the webpage easily scannable?</li>
+				<li class="fragment">Are corresponding pieces of content near each other?</li>
+			</ul>
+			<aside class="notes">I don't think LMO fails at this. I think we do good with this item for the most part. Again, it helps to think of this one in a mobile-first format, in my opinion. How is mobile content going to read? Then decide what adjustments, if any, need to be made for larger screens. When I say scannable, I mean are the structural components (header, footer, sidebar) easily differentiated from the main content? And is the main content laid out with a page title followed by corresponding page content with quickly readable headers that give meaning to the content on the page? The last point is kind of self explantory.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX</span>
+			<h2>Meaningful Links</h2>
+		</section>
+		<section>
+			<span class="section-path">UX :: Meaningful Links</span>
+			<h3>Context</h3> 
+			<ul>
+				<li class="fragment">Link text should be explanatory - no Click Here or Read More</li>
+				<li class="fragment">Text surrounding the link should be in relation to the link itself</li>
+			</ul>
+			<aside class="notes">In a lot of cases this will fall to the developer to handle. We use a class on content that makes it hidden from view but read by screen readers. We tend to use Learn More or Read More when it comes to blog articles, which makes sense from getting a user to understand there is more content elsewhere, but this is a big accessibility failure. But it's also something that is very easy to correct. Example: Learn More About Topic XYZ, where About XYZ would be in the code but hidden from view.</aside>
+		</section>
+		<section>
+			<span class="section-path">UX :: Meaningful Links</span>
+			<h3>External</h3>
+			<ul>
+				<li class="fragment">Only use external links when necessary</li>
+				<li class="fragment">External links should give users advanced warning</li>
+			</ul>
+			<aside class="notes">External links can be jarring to those with disabilities. The user is searching a website, the click on a link, and then they're on a whole different site without warning. If the external link is in text, then it would be helpful to explicity say in the text that the following link/s will open in a new site. If it's a standalone link, there should be an icon that signifies a new window will be open and then in code, the developer can use the access class to say that the link will open in a new window.</aside>
+		</section>
+	</section>
+		<section>
+		<section>
+			<h2>Design</h2>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Color</h2>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Contrast Ratios</h3>
+			<ul>
+				<li class="fragment">> 24px &amp; > 19px bold = 4:5:1</li>
+				<li class="fragment">24+px &amp; 19+px bold = 3:1</li>
+				<li class="fragment">Color Palette/Branding</li>
+				<li class="fragment">Hover/Focus states</li>
+			</ul>
+			<aside class="notes">All text of the page must be test and passing. This means text placed over image, video or multi-colored backgrounds. When we create branding from a project's outset we should be ensuring that the logo and color palette will meet contrast – especially true with buttons. If the colors don't work they'll need to be modified until they do. And if we are given brand standards from an existing guide and the colors will fail contrast, we need to let the client know that their colors will be adjust until they pass the necessary accessibility color contrast ratios. Both hover and focus states must pass the ratios in addition to the default state.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Conveying Information</h3>
+			<ul>
+				<li class="fragment">Text plus color</li>
+				<li class="fragment">Color plus patterns or icons</li>
+			</ul>
+			<aside class="notes">We can't rely on color alone to convey meaning. If using color to represent an action or state of something use it in conjunction with text and icons where applicable. The color and pattern item example would be have a route map that uses color to indicate the different paths. In conjunction to the color, a symbol/pattern such as diamonds, squares and circles would also be used.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design :: Color</span>
+			<h3>Tools</h3>
+			<ul>
+				<li class="fragment">Contrast Checker <a href="http://contrastchecker.com/">http://contrastchecker.com/</a></li>
+				<li class="fragment">Lea Verou’s Contrast Ratio Tool <a href="http://leaverou.github.io/contrast-ratio/">http://leaverou.github.io/contrast-ratio/</a></li>
+				<li class="fragment">Colour Contrast Analyzer <a href="https://www.paciellogroup.com/resources/contrastanalyser/">https://www.paciellogroup.com/resources/contrastanalyser/</a></li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Font Guidelines</h2>
+			<ul>
+				<li class="fragment">Avoid small font size: 16 pixels is recommended</li>
+				<li class="fragment">Limit number of fonts used and ensure they're legible</li>
+				<li class="fragment">Limit the use of bold, italic and all capitals</li>
+				<li class="fragment">Avoid blinking or moving text</li>
+			</ul>
+			<aside class="notes">While there is no set specification on a baseline font-size, the development team recommends a starting size of 16px and nothing below 12px if a smaller size is used. The number of fonts used not only can decrease legibility and cause confusion, it can also have a dramatic impact on overall page weight. Font variants should be used only as necessary. Using all caps in large blocks of text makes reading difficulty - limit the use of all caps. Blinking and moving text can cause distractions. There's also a WCAG guideline that requires any autoplaying animations/video must require pause/stop functionality.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Mobile Touch Areas</h2>
+			<ul>
+				<li class="fragment">Tap target size is a minimum of 48px</li>
+				<li class="fragment">Space between tap areas should be a minimum of 32px</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Links</h2>
+			<ul>
+				<li class="fragment">Contrast with surrounding text is 3:1</li>
+				<li class="fragment">Contrast with background</li>
+				<li class="fragment">Indicator (underline)</li>
+				<li class="fragment">Hover &amp; Focus States</li>
+				<li class="fragment">Meaningful content</li>
+				<li class="fragment">External Link Indicator</li>
+			</ul>
+			<aside class="notes">Link text must pass the requisite color contrast with the background and also provide a sufficient contrast between the surrounding text. However, because color should not be the way to convey something, an indicator should also be used. The best and easiest indicator is underlining the link text. Hover and focus states must also follow the contrast ratios and provide an indication of change. And as mentioned previously, if a link opens in a new window, there should be something to indicate that.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Focus States</h2>
+			<ul>
+				<li class="fragment">Browser Defaults</li>
+				<li class="fragment">Overrides must pass color contrast</li>
+				<li class="fragment">Anything navigable requires a focus
+					<ul>
+						<li class="fragment">Links, Buttons, Accordions, Menu Buttons, Modal Windows, Tabs/tab content</li>
+					</ul>
+				</li>
+			</ul>
+			<aside class="notes">All browsers have built-in focus states. This is the blue line that people always seem to question. These focus states are necessary. In most cases, the best thing to do is leave this as a browser default. This is an easily changeable item, but if it is changed to more match a site's color scheme, it still must pass color contrast ratio rules.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Forms</h2>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Guidelines</h3>
+			<ul>
+				<li class="fragment">Show labels (placeholders are not labels)</li>
+				<li class="fragment">Inputs and placeholder text pass color ratios</li>
+				<li class="fragment">Indicate specific format (date, phone)</li>
+				<li class="fragment">Inputs must scale if the page is scaled up in size</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Guidelines Continued</h3>
+			<ul>
+				<li>Indicate required fields
+					<ul>
+						<li class="fragment">Asterisk and text</li>
+						<li class="fragment">Notation must be in the intro text or the first element above the form (visually and html position)</li>
+					</ul>
+				</li>
+				<li class="fragment">Error vs. Success
+					<ul>
+						<li class="fragment">Color, Text and Icons</li>
+						<li class="fragment">Text is informative</li>
+					</ul>
+				</li>
+				<li class="fragment">Submit
+					<ul>
+						<li class="fragment">No auto submissions (utilize button)</li>
+						<li class="fragment">In-page completion message should receive focus</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">Design :: Forms</span>
+			<h3>Financial, Legal or Testing</h3>
+			<ul>
+				<li class="fragment">Ability to review before submission and confirm review</li>
+				<li class="fragment">Ability to recover deleted information</li>
+				<li class="fragment">Confirmation before continuation</li>
+				<li class="fragment">Success Feedback</li>
+			</ul>
+			<aside class="notes">User must review input is correct before completing an irreversible transaction. A checkbox is also required during a review stage or before form submission can be completed. In regards to deleted information, think of Gmail, you can delete items but they're moved to a Trash folder which then has a Permanently Delete action. A user must be prompted with a message asking if they were sure they want to take that action. Think of a form cancel button. Success feedback would be something like creating a user account. The user should be notified their account was created successfully and then told if they are automatically logged in or if they will need to take further action.</aside>
+		</section>
+		<section>
+			<span class="section-path">Design</span>
+			<h2>Video</h2>
+			<ul>
+				<li class="fragment">YouTube Preferred</li>
+				<li class="fragment">Auto-playing videos must have pause/stop controls (and muted)</li>
+				<li class="fragment">Many accessibility rules to follow
+					<ul>
+						<li class="fragment">Controls, Closed Caption, Scripts w/time cues, etc</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</section>
+		<section>
+		<section>
+			<h2>Front-end Development</h2>
+		</section>
+		<section>
+			<span class="section-path">FE Dev</span>
+			<h2>Wireframe and Design Reviews are Important</h2>
+			<aside class="notes">I have this under FE Dev, but really it's important for everyone to be invloved in the review process from each department. We should all be checking over the work that will be shown to the client to ensure it's meeting a11y and all other business goals and objectives.</aside>
+		</section>
+		<section>
+			<span class="section-path">FE Dev</span>
+			<h2>(re)test color contrast</h2>
+			<aside class="notes">The goal moving forward to is have the design team check all their color choices against the contrast ratios, but it's we all know that things change during development. The front-end team should be running a re-check of any colors that seem questionable.</aside>
+		</section>
+		<section>
+			<span class="section-path">FE Dev</span>
+			<h2>A11Y Quick Points</h2>
+			<ul>
+				<li class="fragment">Content reads logically if CSS is turned off</li>
+				<li class="fragment">Semantic markup and landmark roles</li>
+				<li class="fragment">Skip link</li>
+				<li class="fragment">All buttons have text</li>
+				<li class="fragment">Page title</li>
+				<li class="fragment">Focus states</li>
+				<li class="fragment">Keyboard accessible</li>
+				<li class="fragment">Image Alt tags</li>
+				<li class="fragment">Legible at 200%</li>
+				<li class="fragment">Forms</li>
+				<li class="fragment">Validation</li>
+			</ul>
+			<aside class="notes">Semantic markup is probably one of the most important a11y needs as well as one of the easiest to implement or fix. Landmark role of main with an ID for the skip link. Page title as well as all other meta tags (not a11y required) but need to make sure we're including OG tags and Twitter card tags in addition to page title and description meta information. Button markup needs text inside of it. All sections of the site must be keyboard accessible and should show appropriate focus states.</aside>
+		</section>
+		<section>
+			<span class="section-path">FE Dev</span>
+			<h2>Confluence Documentation</h2>
+			<small class="subtitle"><a href="https://lmovim.atlassian.net/wiki/spaces/FD/pages/140555304/Accessibility+Best+Practices" target="_blank">Accessibility Best Practices</a></small>
+			<ul>
+				<li class="fragment">WCAG Documentation for Level A &amp; AA</li>
+				<li class="fragment">Developer Checklist</li>
+				<li class="fragment">Articles</li>
+				<li class="fragment">Resources</li>
+				<li class="fragment">Tools</li>
+			</ul>
+		</section>
+		<section>
+			<span class="section-path">FE Dev</span>
+			<h2>Future Endeavors</h2>
+			<ul>
+				<li class="fragment">New Section 508 Rule Review</li>
+				<li class="fragment">All LMO sites WCAG 2.0 Level AA Compliant</li>
+			</ul>
+			<aside class="notes">reviewing the refresh of section 508 and comparing it to WCAG AA and seeing what is different between the two. We'll want to start making both sets of requirements as part of our normal accessibility best practices.</aside>
+		</section>
+	</section>
+		
+	<section>
+		<h2>Takeaways</h2>
+		<ul>
+			<li class="fragment">Accessibility should become a standard</li>
+			<li class="fragment">Utilize the tools and resources available</li>
+			<li class="fragment">Accessibility falls on everyone – across all roles and departments</li>
+		</ul>
+	</section>
+	<section>
+		<section><h2>Tool Review</h2></section>
+		<section>
+			<h2>Color Contrast</h2>
+			<ul>
+				<li class="fragment"><a href="http://contrastchecker.com/" target="_blank">Contrast Checker</a></li>
+				<li class="fragment"><a href="http://leaverou.github.io/contrast-ratio/" target="_blank">Lea Verou’s Contrast Ratio Tool</a></li>
+				<li class="fragment"><a href="https://www.paciellogroup.com/resources/contrastanalyser/" target="_blank">Colour Contrast Analyzer</a></li>
+			</ul>
+		</section>
+		<section>
+			<h3><a href="http://chromelens.xyz/">ChromeLens Extension</a></h3>
+		</section>
+		<section>
+			<h3><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en" target="_blank">Chrome Accessibility Developer Tools Extension</a></h3>
+			<ul>
+				<li class="fragment">Chrome Accessibility Properties</li>
+			</ul>
+		</section>
+		<section>
+			<h3>General A11Y Checkers</h3>
+			<ul>
+				<li class="fragment"><a href="http://khan.github.io/tota11y/" target="_blank">A11Y Bookmarklet</a></li>
+				<li class="fragment"><a href="http://wave.webaim.org/extension/" target="_blank">WAVE Extension</a></li>
+			</ul>
+		</section>
+		<section>
+			<h3>Screen Readers</h3>
+			<ul>
+				<li class="fragment"><a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">ChromeVox</a></li>
+				<li class="fragment"><a href="https://help.apple.com/voiceover/info/guide/10.12/" target="_blank">Mac VoiceOver</a></li>
+			</ul>
+		</section>
+		<section>
+			<h3><a href="https://tenon.io/">Tenon</a></h3>
+		</section>
+		<section>
+			<h3><a href="https://fae.disability.illinois.edu/anonymous/?Anonymous Report=/">Functional Accessibility Evaluator</a></h3>
+		</section>
+		<section>
+			<h3><a href="https://validator.w3.org/" target="_blank">Validator</a></h3>
+		</section>
+	</section>
+	<section>
+		<h2>Questions or Comments?</h2>
+	</section>
+			</div>
+		</div> 
+		<script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/plugin/notes/notes.js"></script>
+
+		
+		<script type="text/javascript">
+	    	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	    	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    var pageTracker = _gat._getTracker("UA-XXXXXXXXXXX");
+		    pageTracker._trackPageview();
+		</script> 
+	</body>
+</html>

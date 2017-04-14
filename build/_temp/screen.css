@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
@@ -185,6 +186,31 @@ body {
 body, html {
 	height: 100%;
 	-webkit-overflow-scrolling: touch;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url("/assets/fonts//icomoon.ttf?zbul96") format("truetype"), url("/assets/fonts//icomoon.woff?zbul96") format("woff"), url("/assets/fonts//icomoon.svg?zbul96#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-external:before {
+	content: "➚";
 }
 
 /*!

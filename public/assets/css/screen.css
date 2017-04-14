@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,700);
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
@@ -180,6 +182,24 @@ body {
 body,html {
   height: 100%;
   -webkit-overflow-scrolling: touch;
+}
+
+[class^="icon-"],[class*=" icon-"] {
+ /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+ /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-external:before {
+  content: "➚";
 }/*!
  * reveal.js
  * http://lab.hakim.se/reveal-js
@@ -642,4 +662,4 @@ body {
  * NAVIGATION CONTROLS
  *********************************************/.reveal .controls .navigate-left,.reveal .controls .navigate-left.enabled {border-right-color: #99ccff;}.reveal .controls .navigate-right,.reveal .controls .navigate-right.enabled {border-left-color: #99ccff;}.reveal .controls .navigate-up,.reveal .controls .navigate-up.enabled {border-bottom-color: #99ccff;}.reveal .controls .navigate-down,.reveal .controls .navigate-down.enabled {border-top-color: #99ccff;}.reveal .controls .navigate-left.enabled:hover {border-right-color: white;}.reveal .controls .navigate-right.enabled:hover {border-left-color: white;}.reveal .controls .navigate-up.enabled:hover {border-bottom-color: white;}.reveal .controls .navigate-down.enabled:hover {border-top-color: white;}/*********************************************
  * PROGRESS BAR
- *********************************************/.reveal .progress {background: rgba(0, 0, 0, 0.2);}.reveal .progress span {background: #99ccff;-webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);}@media screen and (max-width: 1024px) {.reveal .speaker-notes {font-size: 14px;}}@media screen and (max-width: 600px) {.reveal .speaker-notes {width: 90%;left: 5%;}}
+ *********************************************/.reveal .progress {background: rgba(0, 0, 0, 0.2);}.reveal .progress span {background: #99ccff;-webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);}@font-face {font-family:'icomoon';src:url("/assets/fonts//icomoon.ttf?zbul96") format("truetype"), url("/assets/fonts//icomoon.woff?zbul96") format("woff"), url("/assets/fonts//icomoon.svg?zbul96#icomoon") format("svg");font-weight:normal;font-style:normal;}@media screen and (max-width: 1024px) {.reveal .speaker-notes {font-size: 14px;}}@media screen and (max-width: 600px) {.reveal .speaker-notes {width: 90%;left: 5%;}}

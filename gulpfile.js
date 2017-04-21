@@ -33,7 +33,7 @@ gulp.task('combineMq', function () {
         beautify: true
     }))
     .pipe(postcss([autoprefixer()]))
-    .pipe(gulp.dest('public/assets/css'));
+    .pipe(gulp.dest('assets/css'));
 });
 
 
@@ -49,12 +49,12 @@ gulp.task('templates', function() {
             indent_size: 4
         }))
 
-    .pipe(gulp.dest('./public/'))
+    .pipe(gulp.dest('./'))
 });
 
 //Must add each page
 gulp.task('hint', function () {
-gulp.src(['./public/index.html'])
+gulp.src(['./index.html'])
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.reporter('htmlhint-stylish'))
     .pipe(htmlhint.failReporter({
